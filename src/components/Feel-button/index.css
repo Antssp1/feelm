@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'ENTRA-Caps';
+    src: url('ENTRA-Caps.woff') format('woff');
+    }	 
+
+.feel-text{
+    text-align: center;
+    font-family: "ENTRA-Caps";
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0;
+    text-shadow: 2px 2px black;
+    color: white;
+    pointer-events : none;
+}
+
+.feel-li{
+    position: relative;
+}
+
+@media screen and (min-width: 1200px){
+    .feel-text{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+        opacity: 0;
+        transition: opacity 400ms ease-in-out;
+    }
+    .round-span{
+        padding: 70px;
+        position: absolute;
+        left: 18%;
+        top: 17%;
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 200ms ease-in-out;
+    }
+    .round-span:hover{
+        background-color: rgba(37, 1, 1, 0.8);
+    }
+    .round-span:hover + .feel-text{
+        opacity: 1;
+    }
+}
