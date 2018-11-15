@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom" 
-import Home from "./components/Home/Home"
-import Actu from "./components/Actu/Actu"
-import Detail from "./components/Detail/Detail"
+import Home from "./components/Home/index"
+import Actu from "./components/Actu/index"
+import Detail from "./components/Detail/index"
 
 class App extends Component {
   render() {
