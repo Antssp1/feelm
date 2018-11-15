@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';import ListButton from './components/List-button/index';
+import './App.css';
+import ListButton from './components/List-button/index';
 
 
 class App extends Component {
