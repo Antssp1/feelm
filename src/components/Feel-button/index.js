@@ -5,7 +5,7 @@ import "./index.css";
 const FeelButton = (props) => (
     <li className="feel-li">
         
-        <img src={props.image} className="feel-icone" alt="feel icone"></img>
+        <img src={props.image} className="feel-icone" alt={props.text}></img>
         <span className="round-span"></span>
         <p className="feel-text">{props.text}</p>
         
