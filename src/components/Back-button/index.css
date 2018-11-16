@@ -1,0 +1,15 @@
+.image-fleche{
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+.bouton-fleche:hover .image-fleche{
+    opacity: 1;
+}
+
+.bouton-fleche{
+    margin-top: 7%;
+    margin-left: 2%;
+    width: min-content;
+    background-color: red
+}
