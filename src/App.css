@@ -1,3 +1,7 @@
+body{
+  background-color: white;
+}
+
 .App {
   text-align: center;
 }
@@ -11,8 +15,11 @@
   /* background-color: #282c34; */
   background-image: url('Components/Button-up/bkg-liste.png');
   background-size: 100%;
-background-repeat: no-repeat;
-
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-attachment: local;
+  /********************************/
 
 
   min-height: 200vh;

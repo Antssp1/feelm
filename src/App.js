@@ -41,7 +41,6 @@ class App extends Component {
         
         <header className="App-header">
           <p>Liste films</p>
-          <p>Liste films</p>
         </header>
         
 
