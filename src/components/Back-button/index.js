@@ -4,15 +4,10 @@ import './index.css';
 import fleche from "./fleche-retour.png"
 
 class BackButton extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            position: props.nav
-          };
-        }
+
   render() {
     return (
-    <div className="bouton-fleche">
+    <div className="bouton-fleche" onClick={this.navigateBack}>
         <NavLink to="/">
         <img className="image-fleche" src={fleche} alt="fleche de retour"></img>
         <NavLink />
