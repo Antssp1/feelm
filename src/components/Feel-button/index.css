@@ -28,6 +28,7 @@
         transition: opacity 400ms ease-in-out;
     }
     .round-span{
+        cursor: pointer;
         padding: 70px;
         position: absolute;
         left: 18%;
