@@ -12,6 +12,7 @@
     font-weight: 600;
     transition: font-size 150ms ease-in-out;
     outline: none;
+    cursor: pointer;
 }
 
 .bouton-tri:hover{
