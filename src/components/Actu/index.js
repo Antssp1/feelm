@@ -3,7 +3,7 @@ import "./index.css"
 
 const Actu = () => {
     return (
-        <div className="container">
+        <div className="container-actu">
             <p>Liste FILM TEST.
             </p>  
         </div>

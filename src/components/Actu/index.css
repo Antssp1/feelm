@@ -1,13 +1,13 @@
-html {
+.container-actu {
     margin: 0;
     padding: 1em;
     background: url("bkg-gif-actu-renverse.gif") no-repeat center fixed;
     background-color: white;
     background-position-y: 0px;
     background-size: 100%;
-}
-.container {
     text-align: center;
+    height: 100vh;
+
 }
 img{
     width: 14em;
@@ -20,9 +20,10 @@ p{
 
 
 @media (min-width: 507px) { 
-    html {
+    .container-actu  {
         background: url("bkg-pc-actu.jpg") no-repeat center fixed;
         background-position-y: 2em;
+        height: 100vh;
     }
    
     .container {
