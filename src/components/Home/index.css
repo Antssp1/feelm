@@ -1,0 +1,31 @@
+.container-home {
+    margin: 0;
+    padding: 1em;
+    background: url("./bkg-home.gif") no-repeat center fixed;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: white;
+    background-position-y: 2em;
+    text-align: center;
+    height: 100vh;
+}
+
+img{
+    width: 14em;
+}
+p{
+    margin-top: 3em;
+    color:white;
+    font-size: 18px;
+}
+@media (min-width: 507px) { 
+    .container-home {
+        background: url("./bkg-pc-home.jpg") no-repeat center;
+        background-position-y: 2em;
+        height: 100vh;
+    }
+   
+    .container {
+        padding-top: 5em;
+    }
+  }
