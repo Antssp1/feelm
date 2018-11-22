@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ButtonUp from "./Components/Button-up/index";
+import ButtonUp from "./components/Button-up/index";
 
 
 class App extends Component {
