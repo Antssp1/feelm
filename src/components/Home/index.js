@@ -1,7 +1,6 @@
 import React from "react"
-import ListButton from "./components/List-button/index"
-import bkg-home from './bkg-home.gif';
 import Logo from './Logo.png';
+import "./index.css";
 
 const Home = () => {
     return (
@@ -10,7 +9,7 @@ const Home = () => {
             <p>L’application qui selon votre humeur vous propose une liste de film.
                 Avec une base de donnée de plus de 400 000 films.
             </p>
-            <ListButton />
+            
         </div>
     )
 }
