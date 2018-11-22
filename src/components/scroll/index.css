@@ -1,0 +1,25 @@
+
+.list-container{
+    position: relative;
+    height: 100%;
+}
+
+.scoll-list{
+    padding: 0;
+    max-height: 100vh;
+    overflow-y: scroll;
+    margin-bottom: 80px;
+}
+
+.scoll-list_item{
+    text-align: center;
+}
+
+.chargement{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left:-35px;
+}
