@@ -22,7 +22,7 @@ p{
 @media (min-width: 507px) { 
     .container-actu  {
         background: url("bkg-pc-actu.jpg") no-repeat center fixed;
-        background-position-y: 2em;
+        background-position-y: 0px;
         height: 100vh;
     }
    
