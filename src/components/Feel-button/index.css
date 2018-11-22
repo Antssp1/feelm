@@ -15,6 +15,9 @@
 
 .feel-li{
     position: relative;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 1200px){
