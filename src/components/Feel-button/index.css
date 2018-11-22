@@ -24,11 +24,11 @@
 
     .round-span{
         cursor: pointer;
-        width: 140px;
-        height: 140px;
+        width: 142px;
+        height: 142px;
         position: absolute;
-        left: 18%;
-        top: 17%;
+        left: 18.5%;
+        top: 17.85%;
         border-radius: 100px;
         background-color: rgba(37, 1, 1, 0.8);
         transition: opacity 200ms ease-in-out;
