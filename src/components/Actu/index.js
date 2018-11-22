@@ -1,9 +1,11 @@
 import React from "react"
+import "./index.css"
 
 const Actu = () => {
     return (
-        <div>
-           
+        <div className="container">
+            <p>Liste FILM TEST.
+            </p>  
         </div>
     )
 }
