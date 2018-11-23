@@ -2,8 +2,7 @@
     font-family: 'ENTRA-Caps';
     src: url('ENTRA-Caps.woff') format('woff');
     }	 
-
-.round-span{
+ .feel-text{
     text-align: center;
     font-family: "ENTRA-Caps";
     font-weight: 900;
@@ -11,34 +10,34 @@
     margin: 0;
     text-shadow: 2px 2px black;
     color: white;
+    pointer-events : none;
 }
-
-.feel-li{
+ .feel-li{
     position: relative;
-    width: min-content;
-    display: flex;
-    flex-direction: column;
 }
-
-@media screen and (min-width: 1200px){
-
-    .round-span{
-        cursor: pointer;
-        width: 142px;
-        height: 142px;
+ @media screen and (min-width: 1200px){
+    .feel-text{
         position: absolute;
-        left: 18.5%;
-        top: 17.85%;
-        border-radius: 100px;
-        background-color: rgba(37, 1, 1, 0.8);
-        transition: opacity 200ms ease-in-out;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
         opacity: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transition: opacity 400ms ease-in-out;
+    }
+    .round-span{
+        padding: 70.6px;
+        position: absolute;
+        left: 18.3%;
+        top: 17.6%;
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 200ms ease-in-out;
+        cursor: pointer;
     }
     .round-span:hover{
-        opacity: 1;
-
+        background-color: rgba(37, 1, 1, 0.8);
     }
-}
+    .round-span:hover + .feel-text{
+        opacity: 1;
+    }
+} 
