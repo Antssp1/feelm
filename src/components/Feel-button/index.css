@@ -25,17 +25,19 @@
         transition: opacity 400ms ease-in-out;
     }
     .round-span{
-        padding: 70.6px;
+        padding: 70px;
         position: absolute;
-        left: 18.3%;
-        top: 17.6%;
+        left: 40px;
+        top: 50.6px;
         border-radius: 100px;
+        border: 1px solid transparent;
         background-color: rgba(0, 0, 0, 0);
         transition: background-color 200ms ease-in-out;
         cursor: pointer;
     }
     .round-span:hover{
         background-color: rgba(37, 1, 1, 0.8);
+        border: 1px solid purple;
     }
     .round-span:hover + .feel-text{
         opacity: 1;

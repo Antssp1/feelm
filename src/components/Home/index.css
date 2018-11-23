@@ -4,14 +4,32 @@
     background: url("./bkg-home.gif") no-repeat center fixed;
     background-size: cover;
     -o-background-size: cover;
-    background-color: white;
     background-position-y: 2em;
     text-align: center;
-    height: 100vh;
+
+}
+
+.question{
+    
+}
+
+.gif-fleche{
+    width: 70px;
+    height: 70px;
+}
+
+.gif-fleche-close{
+    display: none;
+}
+
+.div-question-gif{
+    margin-top:25vh;
+    position: relative;
 }
 
 img{
     width: 14em;
+    margin-top: 5%
 }
 p{
     margin-top: 3em;
@@ -20,12 +38,28 @@ p{
 }
 @media (min-width: 507px) { 
     .container-home {
-        background: url("./bkg-pc-home.jpg") no-repeat center;
+        background: url("./bkg-pc-home.jpg") no-repeat center fixed;
         background-position-y: 2em;
-        height: 100vh;
+   
     }
    
     .container {
         padding-top: 5em;
+    }
+
+    .div-question-gif{
+        margin-top:20vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .question{
+        margin-top: 85px
+    }
+
+    .gif-fleche{
+        margin-top: 55px;
+        position: absolute;
+        transform: translate(200%)
     }
   }
