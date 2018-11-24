@@ -27,11 +27,11 @@
     position: relative;
 }
 
-img{
+.container-home img{
     width: 14em;
     margin-top: 5%
 }
-p{
+.container-home p{
     margin-top: 3em;
     color:white;
     font-size: 18px;
