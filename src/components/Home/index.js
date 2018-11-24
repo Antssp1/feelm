@@ -9,7 +9,7 @@ class Home extends Component{
         super(props)
         this.state = {
           lastOffset: 0,
-          isVisible: false
+          isVisible: true
         }
       }
        handleScroll(evt) {
