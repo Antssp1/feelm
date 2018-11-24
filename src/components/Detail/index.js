@@ -1,6 +1,5 @@
 import React from "react";
-import playbutton from "./playbutton.png";
-import ListeDescription from "./liste-description";
+import ListeDescription from "../../components/liste-description/index";
 
 const Detail = () => {
     return (
