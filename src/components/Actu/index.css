@@ -1,0 +1,18 @@
+.container-actu {
+    background: url("bkg-gif-actu-renverse.gif") no-repeat center fixed;
+    background-position-y: 0px;
+    background-size: 100%;
+    text-align: center;
+    height: 100vh;
+}
+
+
+
+@media (min-width: 507px) { 
+    .container-actu  {
+        background: url("bkg-pc-actu.jpg") no-repeat center fixed;
+        background-position-y: 0px;
+        height: 100vh;
+    }
+   
+  }

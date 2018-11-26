@@ -1,54 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import ButtonUp from "./components/Button-up/index";
+import {BrowserRouter, Route, Switch} from "react-router-dom" 
+import Home from "./components/Home/index"
+import Actu from "./components/Actu/index"
+import Detail from "./components/Detail/index"
 
 
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      lastOffset: 0,
-      isVisible: false
-    }
-  }
-
-  handleScroll(evt) {
-    const offset = Math.round(window.pageYOffset)
-
-    if (this.state.lastOffset !== offset) {
-      if (this.state.lastOffset < offset) {
-        this.setState({ isVisible: true, lastOffset: offset })
-      }else{
-        this.setState({ isVisible: false, lastOffset: offset })
-
-      }
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', (evt) => this.handleScroll(evt))
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', (evt) => this.handleScroll(evt))
-  }
-
   render() {
     return (
-      <div id="top" className="App" onScroll={(evt) => this.handleScroll(evt)}>
-        <ButtonUp isVisible={this.state.isVisible} />
-        
-        <header className="App-header">
-          <p>Liste films</p>
-        </header>
-        
-
-
-
-
-
-
+      <div className="App">
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" component={Home} exact/>
+            <Route path="/actu" component={Actu}/>
+            <Route path="/detail" component={Detail}/>
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
