@@ -18,7 +18,7 @@ code {
 .button-up{
   position: fixed;
   visibility: hidden;
-  margin-left: 78%; 
+  left: 78%; 
 }
 
 .visible{
@@ -36,13 +36,13 @@ code {
 
 @media (min-width: 576px) { 
   .button-up{
-    margin-left: 86%; 
+    left: 86%; 
   } 
 
 }
 @media (min-width: 991.98px) {
   .button-up{
-    margin-left: 90%; 
+    left: 90%; 
   } 
 
 }

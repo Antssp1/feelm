@@ -8,7 +8,7 @@ class ButtonUp extends Component {
     render() {
         return (
             <div className={this.props.isVisible ? 'visible button-up' : 'button-up'}>
-                <a href="../App.js#top" className="buttonlink" >
+                <a href="#top" className="buttonlink" >
                     <img className="button-img" src={upbutton} alt="Button up" />
                 </a>
             </div>
