@@ -7,12 +7,13 @@ class ListFilm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            film: props.image
+            film: []
           };
         }
+        
 
-        getImage() { 
-            fetch("https://api.themoviedb.org/3/movie/550?")
+        componentDidMount() { 
+            fetch(" /discover/movie?sort_by=popularity.desc")
                 .then(response  =>  response.json())
                 .then(data  => {
                 this.setState({
@@ -22,19 +23,17 @@ class ListFilm extends Component {
         }
 
     render() {
-        return(
-       
+    const listeDeFilm = () => ( 
+    
     <ul className="list-film">
-
-        {this.state.map(elem => (
-                <li>
-                {this.getImage()}
-         
-                </li>
-            ))}
-    </ul>
-   
+        {this.state.film.map(elem =>(
+            <li>{listeDeFilm}</li>
+    
+        )           
 )}
+</ul> 
+) 
+}
 }
 
 export default ListFilm
