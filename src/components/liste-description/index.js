@@ -1,10 +1,6 @@
 import React from "react";
 import "./index.css"
 
-
-// - liens avec l'API + lien avec le film choisi dans la page ACTU
-
-
 const ListeDescription = ({ infos }) => {
     return (
         <div className="container-detail">
@@ -32,8 +28,6 @@ const ListeDescription = ({ infos }) => {
                 <h3>Film similaires</h3>
             </div>
         </div>
-
-
     )
 }
 
