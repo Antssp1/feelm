@@ -1,13 +1,15 @@
 import React from "react";
 import "./index.css";
 import Gif from "./giffy.gif";
+import ListFilm from "../List-film/index"
 
 class Layout extends React.Component {
   constructor(props) {
    super(props);
    this.state = {
       items: 10,
-      loadingState: false
+      loadingState: false,
+      totalItem:[]
     };
   }
 
@@ -21,7 +23,7 @@ class Layout extends React.Component {
   displayItems() {
     var items = [];
     for (var i = 0; i < this.state.items; i++) {
-      items.push(<li className="scoll-list_item" key={i}> {i}</li>);
+      items.push(<ListFilm key={i} />);
     }
     return items;
   }
