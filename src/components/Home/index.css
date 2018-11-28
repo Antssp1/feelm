@@ -3,13 +3,14 @@
     padding: 1em;
     background: url("./bkg-home.gif") no-repeat center fixed;
     background-size: cover;
-    -o-background-size: cover;
     background-position-y: 2em;
     text-align: center;
-
+    padding-top: 4em;
 }
 
-.question{
+
+.div-question-gif p{
+    margin-top: 5vh;
     
 }
 
@@ -23,43 +24,52 @@
 }
 
 .div-question-gif{
-    margin-top:25vh;
+    margin-top:18vh;
     position: relative;
 }
 
-.container-home img{
+.logo-description img{
     width: 14em;
     margin-top: 5%
 }
+.logo-description p{
+    margin-top:13vh; 
+}
 .container-home p{
-    margin-top: 3em;
     color:white;
     font-size: 18px;
 }
-@media (min-width: 507px) { 
+
+@media (min-width: 576px) { 
+    .header-description {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    .container-home p{
+        font-size: 20px;
+    }
+    
     .container-home {
         background: url("./bkg-pc-home.jpg") no-repeat center fixed;
         background-position-y: 2em;
-   
-    }
-   
-    .container {
-        padding-top: 5em;
     }
 
     .div-question-gif{
-        margin-top:20vh;
+        margin-top:11vh;
         display: flex;
         justify-content: center;
     }
 
-    .question{
+    .div-question-gif .question{
         margin-top: 85px
     }
 
     .gif-fleche{
         margin-top: 55px;
         position: absolute;
-        transform: translate(200%)
+        transform: translate(200%);
+        margin-left: 15px;
     }
   }
+
+ 

@@ -1,16 +1,21 @@
-import React from "react"
+import React, {Component} from "react"
 import "./index.css"
-import BoutonTri from "../Bouton-tri/index"
-import Layout from "../scroll/index"
+import BoutonTri from "../Bouton-tri/index";
+import Layout from "../scroll/index";
+import ButtonScroll from '../ButtonScroll/index'
 
-const Actu = () => {
-    return (
-        <div className="container-actu">
-            <BoutonTri />
-            <Layout />
-        </div>
-    )
+class Actu extends Component {
+   
+    render() {
+        return (
+            <div id="top" className="container-actu" onScroll={(evt) => this.handleScroll(evt)}>
+                <BoutonTri />
+                <Layout />
+                <ButtonScroll direction="up"/>
+            </div>
+        )
+    }
 }
 
 
-export default Actu
+    export default Actu
