@@ -1,35 +1,38 @@
-import React from "react";
-import "./index.css"
+import React, {Component} from "react";
+import "./index.css";
+import DetailFilm from "../DetailsFilm/index";
+// rajout du bouton play avec Bande-Annonce
 
-const ListeDescription = ({ infos }) => {
-    return (
-        <div className="container-detail">
+class ListeDescription extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            dataList:[]
+        }
+    }
 
-            <div className="header-detail">
-                <img src="" alt="Affiche film" />
-                <p className="Titre du film">{}</p>
-                <img src="" alt="Button Play"/> 
-            </div>
+    componentDidMount(){
+        fetch("https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1" )
+        .then(response => response.json())
+        .then (data => {
+            this.setState({
+                dataList : data.results 
+            })
+        })
+    }
 
-            <div className="list-infos-film">
-                <ul className="info">
-                    <li>Année : {}  </li>
-                    <li>Genre : {}  </li>
-                    <li>Durée : {} </li>
-                </ul>
-                <ul>
-                    <li>Producteur :{}  </li>
-                    <li>Acteurs : {} </li>
-                </ul>
-                <p className="description-film">{}</p>
-            </div>
-            
-            <div className="films-similaires">
-                <h3>Film similaires</h3>
-            </div>
-        </div>
-    )
+
+    render(){
+        const list = this.state.dataList.map((detail, index) => (
+            <DetailFilm key={index} affiche={detail.backdrop_path} titre={detail.title} annee={detail.release_date} description={detail.overview} duree={detail.runtime} genre={detail.genre_ids} ></DetailFilm>
+        ))
+        return(
+            <ul className="todo-list">
+                {list}
+            </ul>
+        )
+    }
+
 }
-
 
 export default ListeDescription;
