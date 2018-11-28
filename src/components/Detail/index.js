@@ -1,22 +1,19 @@
 import React, {Component} from "react";
 import DetailFilm from "../DetailsFilm/index";
+import DetailsFilm from "../DetailsFilm/index";
  
 
-// const Detail =() => (
-//     <div>
-//         <ListeDescrption/>
-//     </div>
-// )
 const idMovie = 338952;
 
 class Detail extends Component{
     constructor(props){
         super(props)
         this.state = {
-            dataList:[],
             movieData:[], 
             cast:[],
-            director:{}
+            director:{},
+            genre:{},
+            video:{},
         }
     }
 
@@ -25,20 +22,62 @@ class Detail extends Component{
         .then(response => response.json())
         .then (data => {
             this.setState({
-                dataList : data 
+                movieData : data 
             })
         })
 
+
+        fetch("https://api.themoviedb.org/3/movie/338952/credits?api_key=b53ba6ff46235039543d199b7fdebd90" )
+        .then(response => response.json())
+        .then (data => {
+            this.setState({
+                cast : data.cast[0]
+            })
+        })
+
+
+        fetch("https://api.themoviedb.org/3/movie/338952/credits?api_key=b53ba6ff46235039543d199b7fdebd90" )
+        .then(response => response.json())
+        .then (data => {
+            this.setState({
+                director : data.crew[0]
+            })
+        })
+
+
+        fetch("https://api.themoviedb.org/3/movie/338952?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US" )
+        .then(response => response.json())
+        .then (data => {
+            this.setState({
+                genre : data.genres[0]
+            })
+        })
+
+        fetch("https://api.themoviedb.org/3/movie/338952/videos?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US" )
+        .then(response => response.json())
+        .then (data => {
+            this.setState({
+                video : data.results[0]
+            })
+        }) 
     }
 
 
     render(){
-
         
-
         return(
             <div>
-                <DetailFilm affiche={this.state.dataList.backdrop_path} titre={this.state.dataList.title} annee={this.state.dataList.release_date} description={this.state.dataList.overview} duree={this.state.dataList.runtime} genre={this.state.dataList.genre} ></DetailFilm>
+                <DetailFilm 
+                    affiche={this.state.movieData.backdrop_path}
+                    video={this.state.video.key} 
+                    titre={this.state.movieData.title} 
+                    annee={this.state.movieData.release_date} 
+                    description={this.state.movieData.overview}
+                    duree={this.state.movieData.runtime} 
+                    genre={this.state.genre.name}
+                    acteur={this.state.cast.name}
+                    producteur={this.state.director.name} >
+                 </DetailFilm>
             </div>
         )
     }
