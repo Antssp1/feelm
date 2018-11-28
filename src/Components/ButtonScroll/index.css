@@ -1,0 +1,35 @@
+
+/****Button down****/
+
+.gif-fleche{
+  width: 70px;
+  height: 70px;
+}
+
+.gif-fleche-close{
+  display: none;
+}
+
+
+/****Button up****/
+
+.button-up{
+  position: fixed;
+  visibility: hidden;
+  right: 20px;
+  top: 80%;
+}
+
+.visible{
+  visibility: visible;
+}
+
+.button-img{
+  display: block;
+  opacity: 0.6;
+}
+.button-img:hover{
+  opacity: 1;
+}
+ 
+
