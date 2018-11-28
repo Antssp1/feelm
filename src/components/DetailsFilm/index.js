@@ -14,23 +14,26 @@ const DetailsFilm = (props) => {
                 <div className="bg-opacite">
                     <h2 className="Titre-film">{props.titre}</h2>
                     <img src={`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`} alt="Affiche film" />
-                    <hr/>
+                    <hr />
                 </div>
             </div>
-            <img src={ButtonPlay} className="button-play" alt="Button Play" />
 
-            <div className="list-infos-film">
+            <div className="liste-detail">
+                <img src={ButtonPlay} className="button-play" alt="Button Play" />
 
-                <ul className="info">
-                    <li className="right"> {props.annee} </li>
-                    <li>{props.genre} </li>
-                    <li className="no-bar">{props.duree} mins </li>
-                </ul>
-                <ul className="info2">
-                    <li className="right">Productor : {props.producteur} </li>
-                    <li className="no-bar">Principal actor : {props.acteur}  </li>
-                </ul>
-                <p className="description-film">{props.description}</p>
+                <div className="list-infos-film">
+                    <ul className="info">
+                        <li className="right"> {props.annee} </li>
+                        <li>{props.genre} </li>
+                        <li className="no-bar">{props.duree} mins </li>
+                    </ul>
+                    <ul className="info2">
+                        <li className="right">Productor : {props.producteur} </li>
+                        <li className="no-bar">Principal actor : {props.acteur}  </li>
+                    </ul>
+                    <p className="description-film">{props.description}</p>
+                </div>
+
             </div>
 
             <div className="films-similaires">

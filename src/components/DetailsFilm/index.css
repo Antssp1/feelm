@@ -39,13 +39,14 @@ hr{
 }
 .button-play {
     position: absolute;
-    left: 78%;
+    left: 73%;
     margin-top: -44px;
 }
 
 .list-infos-film .info li{
     display: inline;
     font-weight:600;
+    font-size:15px;
 }
 
 .list-infos-film .info2 li{
@@ -91,10 +92,19 @@ p.description-film {
 
 
 
-@media (min-width: 507px) { 
+@media (min-width: 576px) { 
     .container-detail .films-similaires {
         background: url("./bkg-pc-detail.jpg") no-repeat center ;
         background-position-y: 1em;
     }
-   
+    .button-play {
+        left: 82%;
+    }
+}
+
+@media (min-width:768px){
+    .liste-detail{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
 }
