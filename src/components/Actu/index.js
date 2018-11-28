@@ -1,15 +1,16 @@
-import React from "react"
+import React, {Component} from "react"
 import "./index.css"
-import BoutonTri from "../Bouton-tri/index"
-import Layout from "../scroll/index"
+import ButtonScroll from '../ButtonScroll/index'
 
-const Actu = () => {
-    return (
-        <div className="container-actu">
-            <BoutonTri />
-            <Layout />
-        </div>
-    )
+
+class Actu extends Component {
+
+    render() {
+        return (
+           <ButtonScroll direction="up"/>
+            
+        )
+    }
 }
 
 
