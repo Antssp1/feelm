@@ -1,17 +1,21 @@
 import React, {Component} from "react"
 import "./index.css"
+import BoutonTri from "../Bouton-tri/index";
+import Layout from "../scroll/index";
 import ButtonScroll from '../ButtonScroll/index'
 
-
 class Actu extends Component {
-
+   
     render() {
         return (
-           <ButtonScroll direction="up"/>
-            
+            <div id="top" className="container-actu" onScroll={(evt) => this.handleScroll(evt)}>
+                <BoutonTri />
+                <Layout />
+                <ButtonScroll direction="up"/>
+            </div>
         )
     }
 }
 
 
-export default Actu
+    export default Actu
