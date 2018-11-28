@@ -1,0 +1,54 @@
+/* .header-detail {
+    background-image: url({`https://image.tmdb.org/t/p/w185_and_h278_bestv2${props.affiche}`});
+    height: 75vh;
+} */
+.list-infos-film, .header-detail, .films-similaires{
+    padding:2em;
+}
+.header-detail {
+    background-color:red;
+}
+.header-detail p{
+    font-size: 1.5em;
+}
+
+.header-detail .button-trailer{
+    width: 100%;
+}
+
+.list-infos-film ul li{
+    display: inline;
+    font-weight: bold;
+}
+.list-infos-film ul li:not(.no-bar){
+    border-right: 2px solid #fe5e18;
+}
+.list-infos-film ul {
+
+    padding-left:0;
+}
+
+p.description-film {
+    margin-top: 4em;
+}
+
+
+
+
+
+.container-detail .films-similaires{
+    margin: 0;
+    background: url("./bkg-mobile-detail.jpg") no-repeat center ;
+    background-position-y: 0;
+    text-align: center;
+    height: 100vh;
+}
+
+@media (min-width: 507px) { 
+    .container-detail .films-similaires {
+        background: url("./bkg-pc-detail.jpg") no-repeat center ;
+        background-position-y: 1em;
+        height: 100vh;
+    }
+   
+}

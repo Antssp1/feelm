@@ -27,9 +27,9 @@ class ListeDescription extends Component{
             <DetailFilm key={index} affiche={detail.backdrop_path} titre={detail.title} annee={detail.release_date} description={detail.overview} duree={detail.runtime} genre={detail.genre_ids} ></DetailFilm>
         ))
         return(
-            <ul className="todo-list">
+            <div>
                 {list}
-            </ul>
+            </div>
         )
     }
 
