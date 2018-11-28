@@ -3,14 +3,41 @@ import "./index.css";
 import Gif from "./giffy.gif";
 import ListFilm from "../List-film/index"
 
+let count = 1;
 class Layout extends React.Component {
   constructor(props) {
    super(props);
    this.state = {
-      items: 10,
       loadingState: false,
-      totalItem:[]
+      movieList:[],
+      currentPage: 1
     };
+  }
+
+  componentDidMount() { 
+    this.loadAPI()
+}
+
+componentDidUpdate(prevProps, prevState){
+  console.log(prevState.currentPage,this.state.currentPage)
+  if(prevState.currentPage !== this.state.currentPage){
+    this.loadAPI()
+  }
+}
+
+
+  loadAPI() {
+    let table = this.state.movieList;
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${this.state.currentPage}`)
+        .then(response  =>  response.json())
+        .then(data  => {
+
+          table.push(...data.results)
+        this.setState({
+          movieList: table,
+          loadingState: false
+        });
+    });
   }
 
   handleScroll(ev){
@@ -20,26 +47,27 @@ class Layout extends React.Component {
       }
   }
 
-  displayItems() {
-    var items = [];
-    for (var i = 0; i < this.state.items; i++) {
-      items.push(<ListFilm key={i} />);
-    }
-    return items;
-  }
-
   loadMoreItems() {
-    this.setState({ loadingState: true });
-    setTimeout(() => {
-      this.setState({ items: this.state.items + 10, loadingState: false });
-    }, 2000);
+    console.log('more')
+      this.setState({ loadingState: true });
+      setTimeout(() => {
+        count++
+        this.setState({
+          currentPage : count
+        })
+      }, 1000); 
   }
 
   render() {
+    const movieList = this.state.movieList.map((elem, index) => (
+
+      <li key={index}><img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${elem.poster_path}`} alt=""/></li>
+
+    ))
     return (
       <div className="list-container" >
         <ul className="scoll-list" onScroll={(ev) => this.handleScroll(ev)}>
-          {this.displayItems()}
+        {movieList}
         </ul>
 
         {this.state.loadingState ? <img className="chargement" src={Gif}></img> : ""}

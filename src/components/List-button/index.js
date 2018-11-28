@@ -13,7 +13,7 @@ import Anxieux from "./7.png"
 const feel = [
     {
       feeling:"Joyeux",
-      image:Joyeux
+      image:Joyeux,
     }, 
     {
         feeling:"Triste",
@@ -46,7 +46,7 @@ const ListButton = () => (
     <ul className="list-button">
 
         {feel.map(elem => (
-                <FeelButton image={elem.image} text={elem.feeling}/>
+                <FeelButton image={elem.image} text={elem.feeling} classement={elem.classement}/>
             ))}
     </ul>
 )
