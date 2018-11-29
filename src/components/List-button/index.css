@@ -1,0 +1,14 @@
+.list-button{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+@media (min-width: 507px){
+    .list-button{
+        margin-top: 5.5vh;
+    }
+}
