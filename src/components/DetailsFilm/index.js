@@ -8,13 +8,19 @@ import ButtonPlay from "./playbutton.png";
 
 const DetailsFilm = (props) => {
     return (
+
         <div className="container-detail">
 
             <div className="header-detail">
                 <div className="bg-opacite">
-                    <h2 className="Titre-film">{props.titre}</h2>
-                    <img src={`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`} alt="Affiche film" />
-                    <hr />
+                    <div className="titre">
+                        <h2 className="titre-film">{props.titre}</h2>
+                        <hr />
+                    </div>
+                    <div className="image-poster">
+                        <img src={`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`} alt="Affiche film" />
+                    </div>
+
                 </div>
             </div>
 
@@ -24,7 +30,7 @@ const DetailsFilm = (props) => {
                 <div className="list-infos-film">
                     <ul className="info">
                         <li className="right"> {props.annee} </li>
-                        <li>{props.genre} </li>
+                        <li>{props.genre}  </li>
                         <li className="no-bar">{props.duree} mins </li>
                     </ul>
                     <ul className="info2">

@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import DetailFilm from "../DetailsFilm/index";
-import DetailsFilm from "../DetailsFilm/index";
  
 
 const idMovie = 338952;
@@ -53,6 +52,8 @@ class Detail extends Component{
             })
         })
 
+        
+
         fetch("https://api.themoviedb.org/3/movie/338952/videos?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US" )
         .then(response => response.json())
         .then (data => {
@@ -66,6 +67,7 @@ class Detail extends Component{
     render(){
         
         return(
+
             <div>
                 <DetailFilm 
                     affiche={this.state.movieData.backdrop_path}

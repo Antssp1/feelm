@@ -2,8 +2,8 @@
     padding:2em;
 }
 .header-detail {
-    background-color:red;
-    background-image: url({`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`});
+    background-color:black;
+    /* background-image: url({`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`}); */
     height: 50vh;
     background-image: url();
     background-size: 100%;
@@ -16,9 +16,19 @@
     height: 50vh;
 }
 
-.header-detail img{
-    width: 100%;
-    display: none;
+.image-poster{
+    height:50vh;
+}
+
+.image-poster img{
+   width: 100%;
+    display: block;
+    
+}
+
+
+.titre{
+    position: absolute;
 }
 
 .header-detail h2{
@@ -28,6 +38,7 @@
     padding-right: 1.2em;
     margin: 0;
     font-size: 1.7em;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.87);
 }
 
 hr{
@@ -35,7 +46,7 @@ hr{
     margin-left: 2.1em;
     height: 5px;
     border: none;
-    background-color: #ff3c35;
+    background-color: #ff3c35;  
 }
 .button-play {
     position: absolute;
@@ -106,5 +117,14 @@ p.description-film {
     .liste-detail{
         padding-left: 5em;
         padding-right: 5em;
+    }
+    .titre {
+        padding-left: 5.1em;
+    }
+}
+
+@media (min-width:1124px){
+    .image-poster img{
+        
     }
 }
