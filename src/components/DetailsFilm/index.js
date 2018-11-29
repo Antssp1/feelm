@@ -2,7 +2,6 @@ import React from "react";
 import "./index.css";
 import ButtonPlay from "./playbutton.png";
 
-//<img src={`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`} alt="Affiche film" />
 
 //<iframe width="560" height="315" src={`https://www.youtube.com/embed/${props.video}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
