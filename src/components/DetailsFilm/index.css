@@ -1,42 +1,28 @@
 .list-infos-film, .films-similaires{
     padding:2em;
 }
-.header-detail {
-    background-color:black;
-    /* background-image: url({`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`}); */
-    height: 50vh;
-    background-image: url();
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.bg-opacite{
-    background-color: #0000004a;
-    width: 100%;
-    height: 50vh;
-}
 
 .image-poster{
+    background-color:black;
     height:50vh;
+    background-size: cover;
 }
 
 .image-poster img{
-   width: 100%;
-    display: block;
-    
+   width: 100%; 
+   height: 50vh;
+    object-fit: cover;
 }
 
-
-.titre{
+.header-detail .titre{
     position: absolute;
 }
 
 .header-detail h2{
     color:white;
-    padding-top: 5em;
+    padding-top: 4em;
     padding-left: 1.2em;
     padding-right: 1.2em;
-    margin: 0;
     font-size: 1.7em;
     text-shadow: 0px 0px 7px rgba(0,0,0,0.87);
 }
@@ -48,6 +34,7 @@ hr{
     border: none;
     background-color: #ff3c35;  
 }
+
 .button-play {
     position: absolute;
     left: 73%;
@@ -65,6 +52,7 @@ hr{
 }
 .list-infos-film .info2{
     padding-top: 0.5em;
+    font-size:15px;
 }
 
 .list-infos-film ul{
@@ -120,11 +108,5 @@ p.description-film {
     }
     .titre {
         padding-left: 5.1em;
-    }
-}
-
-@media (min-width:1124px){
-    .image-poster img{
-        
     }
 }

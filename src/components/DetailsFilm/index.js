@@ -19,7 +19,7 @@ const DetailsFilm = (props) => {
                     </div>
                     <div className="image-poster">
                         <img src={`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`} alt="Affiche film" />
-                    </div>
+                    </div> 
 
                 </div>
             </div>
