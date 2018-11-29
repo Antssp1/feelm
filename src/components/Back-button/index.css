@@ -8,7 +8,7 @@
 }
 
 .bouton-fleche{
-    margin-top: 7%;
-    margin-left: 2%;
-    width: min-content;
+    width: 40px;
+    margin-left: 5vh;
+    background-color: red
 }
