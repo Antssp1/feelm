@@ -2,8 +2,10 @@ import React from "react";
 import "./index.css";
 import ButtonPlay from "./playbutton.png";
 
-
 //<iframe width="560" height="315" src={`https://www.youtube.com/embed/${props.video}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 
 const DetailsFilm = (props) => {
     return (
