@@ -2,22 +2,25 @@
     cursor: pointer;
     position: absolute;
     left: 73%;
-    margin-top: -44px;
-    z-index:1;
+    margin-top: 0px;
 }
 
-
-.button-play:active {
-    content: url('closebutton.png');
+.button-close {
+    cursor: pointer;
+    position: absolute;
+    left: 79%;
+    z-index: 1;
+    margin-top: -124px;
 }
 
 .video{
-    background-color: #000000a1;
+    background-color: #000000;
     height: 100%;
     width: 100%;
     position: absolute;
     padding-top: 20vh;
     text-align: center;
+    margin-top: -26px;
 }
 
 iframe{
