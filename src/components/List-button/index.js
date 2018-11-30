@@ -14,30 +14,37 @@ const feel = [
     {
       feeling:"Joyeux",
       image:Joyeux,
+      genre:"35"
     }, 
     {
         feeling:"Triste",
-        image:Triste
+        image:Triste,
+        genre:"18"
     },
     {
         feeling:"En Colère",
-        image:EnColere
+        image:EnColere,
+        genre:"10752"
       }, 
       {
         feeling:"Amoureux",
-        image:Amoureux
+        image:Amoureux,
+        genre:"10749"
       }, 
       {
         feeling:"Sadique",
-        image:Sadique
+        image:Sadique,
+        genre:"27"
       }, 
       {
         feeling:"Confiant",
-        image:Confiant
+        image:Confiant,
+        genre:"28"
       },
       {
         feeling:"Anxieux",
-        image:Anxieux
+        image:Anxieux,
+        genre:"53"
       },
   ];
   
@@ -46,7 +53,7 @@ const ListButton = () => (
     <ul className="list-button">
 
         {feel.map(elem => (
-                <FeelButton image={elem.image} text={elem.feeling} classement={elem.classement}/>
+                <FeelButton image={elem.image} text={elem.feeling} genre={elem.genre}/>
             ))}
     </ul>
 )

@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import Gif from "./giffy.gif";
 import ListFilm from "../List-film/index"
+import {withRouter} from "react-router"
 
 let count = 1;
 class Layout extends React.Component {
@@ -14,13 +15,15 @@ class Layout extends React.Component {
     };
   }
 
-  componentDidMount() { 
+  componentDidMount() {
     this.loadAPI()
+    console.log(this.props.location)
 }
 
+
 componentDidUpdate(prevProps, prevState){
-  console.log(prevState.currentPage,this.state.currentPage)
-  if(prevState.currentPage !== this.state.currentPage){
+  console.log(prevProps.apiType,this.props.apiType)
+  if(prevState.currentPage  !== this.state.currentPage || prevProps.apiType  !== this.props.apiType ){
     this.loadAPI()
   }
 }
@@ -28,10 +31,9 @@ componentDidUpdate(prevProps, prevState){
 
   loadAPI() {
     let table = this.state.movieList;
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${this.state.currentPage}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&with_genres=${this.props.location.pathname.substring(6, 7)}&sort_by=${this.props.apiType}.desc`)
         .then(response  =>  response.json())
-        .then(data  => {
-
+        .then(data  => { 
           table.push(...data.results)
         this.setState({
           movieList: table,
@@ -61,9 +63,10 @@ componentDidUpdate(prevProps, prevState){
   render() {
     const movieList = this.state.movieList.map((elem, index) => (
 
-      <li key={index}><img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${elem.poster_path}`} alt=""/></li>
+      <li key={index}><img src={`https://image.tmdb.org/t/p/w200_and_h300_bestv2${elem.poster_path}`} alt=""/></li>
 
     ))
+    
     return (
       <div className="list-container" >
         <ul className="scoll-list" onScroll={(ev) => this.handleScroll(ev)}>
@@ -78,4 +81,4 @@ componentDidUpdate(prevProps, prevState){
   }
 }
 
-export default Layout;
+export default withRouter(Layout);
