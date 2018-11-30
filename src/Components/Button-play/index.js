@@ -25,8 +25,6 @@ class ButtonsPlayClose extends Component {
                     isVisible: !this.state.isVisible
                 })} src={ButtonPlay} className="button-play" alt="Button Play" />
 
-                
-               
                 <br />
                 
                 {this.state.isVisible ? (
