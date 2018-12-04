@@ -5,10 +5,11 @@ import Home from "./components/Home/index"
 import Actu from "./components/Actu/index"
 import Detail from "./components/Detail/index"
 
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" id="top" >
         <BrowserRouter>
           <Switch>
             <Route path="/" component={Home} exact/>
