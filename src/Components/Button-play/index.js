@@ -15,23 +15,21 @@ class ButtonsPlayClose extends Component {
         };
     }
 
+
+    handleClick(){
+        this.setState({
+            isVisible: !this.state.isVisible
+        })
+    }
  
 
     render() {
         return (
             <div className="body">
-
-                <img onClick={() => this.setState({
-                    isVisible: !this.state.isVisible
-                })} src={ButtonPlay} className="button-play" alt="Button Play" />
-
-                <br />
-                
+                <img onClick={() => this.handleClick() } src={ButtonPlay} className="button-play" alt="Button Play" />
                 {this.state.isVisible ? (
                     <div className="video">
-                    <img onClick={() => this.setState({
-                    isVisible: !this.state.isVisible
-                })} src={ButtonClose} className="button-close" alt="Button Play" />
+                    <img onClick={() => this.handleClick()} src={ButtonClose} className="button-close" alt="Button Play" />
                         <iframe width="560" height="315" src="https://www.youtube.com/watch?v=9_k_goMr5ZI&list=RD9_k_goMr5ZI&start_radio=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 ) : null}

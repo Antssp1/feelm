@@ -1,13 +1,15 @@
-.button-play {
+.button-play, .button-close {
     cursor: pointer;
     position: absolute;
+    top:0;
+}
+
+.button-play {
     left: 73%;
     margin-top: 0px;
 }
 
 .button-close {
-    cursor: pointer;
-    position: absolute;
     left: 79%;
     z-index: 1;
     margin-top: -124px;
