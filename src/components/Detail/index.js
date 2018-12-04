@@ -52,6 +52,7 @@ class Detail extends Component{
             })
         })
 
+
         
 
         fetch("https://api.themoviedb.org/3/movie/338952/videos?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US" )

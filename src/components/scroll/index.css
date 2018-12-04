@@ -5,8 +5,6 @@
 
 .scoll-list{
     padding: 0;
-    max-height: 100vh;
-    overflow-y: scroll;
     margin-bottom: 80px;
 }
 

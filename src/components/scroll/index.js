@@ -1,14 +1,44 @@
 import React from "react";
 import "./index.css";
 import Gif from "./giffy.gif";
+import ListFilm from "../List-film/index"
+import {withRouter} from "react-router"
 
+let count = 1;
 class Layout extends React.Component {
   constructor(props) {
    super(props);
    this.state = {
-      items: 10,
-      loadingState: false
+      loadingState: false,
+      movieList:[],
+      currentPage: 1
     };
+  }
+
+  componentDidMount() {
+    this.loadAPI()
+    console.log(this.props.location)
+}
+
+
+componentDidUpdate(prevProps, prevState){
+  console.log(prevProps.apiType,this.props.apiType)
+  if(prevState.currentPage  !== this.state.currentPage || prevProps.apiType  !== this.props.apiType ){
+    this.loadAPI()
+  }
+}
+
+
+  loadAPI() {
+    console.log('ixi')
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&with_genres=${this.props.match.params.genre}&sort_by=${this.props.apiType}.desc`)
+        .then(response  =>  response.json())
+        .then(data  => { 
+        this.setState({
+          movieList: data.results,
+          loadingState: false
+        });
+    });
   }
 
   handleScroll(ev){
@@ -18,26 +48,28 @@ class Layout extends React.Component {
       }
   }
 
-  displayItems() {
-    var items = [];
-    for (var i = 0; i < this.state.items; i++) {
-      items.push(<li className="scoll-list_item" key={i}> {i}</li>);
-    }
-    return items;
-  }
-
   loadMoreItems() {
-    this.setState({ loadingState: true });
-    setTimeout(() => {
-      this.setState({ items: this.state.items + 10, loadingState: false });
-    }, 2000);
+    console.log('more')
+      this.setState({ loadingState: true });
+      setTimeout(() => {
+        count++
+        this.setState({
+          currentPage : count
+        })
+      }, 1000); 
   }
 
   render() {
+    const movieList = this.state.movieList.map((elem, index) => (
+
+      <li key={index}><img src={`https://image.tmdb.org/t/p/w200_and_h300_bestv2${elem.poster_path}`} alt=""/></li>
+
+    ))
+    
     return (
       <div className="list-container" >
         <ul className="scoll-list" onScroll={(ev) => this.handleScroll(ev)}>
-          {this.displayItems()}
+        {movieList}
         </ul>
 
         {this.state.loadingState ? <img className="chargement" src={Gif}></img> : ""}
@@ -48,4 +80,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout;
+export default withRouter(Layout);
