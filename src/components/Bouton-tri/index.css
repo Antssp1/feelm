@@ -1,4 +1,4 @@
-.bouton-tri{
+.popular-container .latest, .latest-container .popular{
     width: 130px;
     height: 35px;
     border-radius: 20px;
@@ -8,16 +8,31 @@
     margin-left: 5px;
     margin-right: 5px;
     border: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
     transition: font-size 150ms ease-in-out;
     outline: none;
     cursor: pointer;
 }
 
-.bouton-tri:hover{
-    background-color: rgba(0, 0, 0, 0.3);
+.popular-container .latest:hover, .latest-container .popular:hover{
+    background-color: rgba(238, 132, 10, 0.7);
     font-size: 14px;
+}
+
+.popular-container .popular, .latest-container .latest{
+    width: 130px;
+    height: 35px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    font-weight: 600;
+    transition: font-size 150ms ease-in-out;
+    outline: none;
+    pointer-events: none;
 }
 
 .tri-bar{
