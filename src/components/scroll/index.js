@@ -31,7 +31,7 @@ componentDidUpdate(prevProps, prevState){
 
   loadAPI() {
     let table = this.state.movieList;
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&with_genres=${this.props.location.pathname.substring(6, 7)}&sort_by=${this.props.apiType}.desc`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US&with_genres=${this.props.match.params.genre}&sort_by=${this.props.apiType}.desc`)
         .then(response  =>  response.json())
         .then(data  => { 
           table.push(...data.results)

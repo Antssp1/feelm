@@ -39,7 +39,8 @@ const feel = [
       {
         feeling:"Confiant",
         image:Confiant,
-        genre:"28"
+        genre:"28",
+        secondGenre:"878"
       },
       {
         feeling:"Anxieux",
