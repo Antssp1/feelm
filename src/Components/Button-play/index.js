@@ -3,7 +3,8 @@ import "./index.css"
 import ButtonClose from "./closebutton.png";
 import ButtonPlay from "./playbutton.png";
 
-// remplacer le iframe par le component video
+// remplacer le iframe par le component video => //<iframe width="560" height="315" src={`https://www.youtube.com/embed/${props.video}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 class ButtonsPlayClose extends Component {
 
