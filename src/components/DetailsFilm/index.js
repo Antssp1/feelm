@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./index.css";
 import ButtonsPlayClose from "../Button-play/index"
-//<img src={`https://image.tmdb.org/t/p/w1400_and_h450_bestv2${props.affiche}`} alt="Affiche film" />
 
 
 class DetailsFilm extends Component {
@@ -41,7 +40,7 @@ class DetailsFilm extends Component {
                         </div>
                        
                     </div>
-
+                    
                     <div className="liste-detail">
 
                         <div className="list-infos-film">
@@ -51,7 +50,7 @@ class DetailsFilm extends Component {
                                 <li className="no-bar">{this.props.duree} mins </li>
                             </ul>
                             <ul className="info2">
-                                <li className="right">Productor : {this.props.producteur} </li>
+                                <li className="right">Producer : {this.props.Producer} </li>
                                 <li className="no-bar">Principal actor : {this.props.acteur}  </li>
                             </ul>
                             <p className="description-film">{this.props.description}</p>

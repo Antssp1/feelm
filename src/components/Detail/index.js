@@ -10,7 +10,7 @@ class Detail extends Component{
         this.state = {
             movieData:[], 
             cast:[],
-            director:{},
+            Producer:{},
             genre:{},
             video:{},
         }
@@ -33,7 +33,7 @@ class Detail extends Component{
         .then (data => {
             this.setState({
                 cast : data.cast[0],
-                director : data.crew[0],
+                Producer : data.crew[2],
             })
         })
         
@@ -62,7 +62,7 @@ class Detail extends Component{
                     duree={this.state.movieData.runtime} 
                     genre={this.state.genre.name}
                     acteur={this.state.cast.name}
-                    producteur={this.state.director.name} >
+                    Producer={this.state.Producer.name} >
                  </DetailFilm>
             </div>
         )

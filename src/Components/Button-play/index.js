@@ -31,6 +31,7 @@ class ButtonsPlayClose extends Component {
                     <div className="video">
                         <img onClick={() => this.handleClick()} src={ButtonClose} className="button-close" alt="Button Play" />
                         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.props.video}?controls=0`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                     </div>
                 ) : null}
             </div>

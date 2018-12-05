@@ -1,3 +1,7 @@
+body{
+    margin:0;
+}
+
 .list-infos-film, .films-similaires{
     padding:2em;
 }
@@ -92,7 +96,6 @@ p.description-film {
     }
     .header-detail .titre{
         position: absolute;
-        width: 100vh;
         height: 50vh;
         background-color: #00000024;
     }

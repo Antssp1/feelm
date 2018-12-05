@@ -2,12 +2,12 @@
     cursor: pointer;
     position: absolute;
     top:0;
-    margin-top:44vh;
+    top:44vh;
     z-index: 1;
 }
 .button-close {
-    margin-top: 15vh;
-    margin-left:55vh;    
+    top: 15vh;
+    margin-left:50vh;    
 }
 
 .video{
