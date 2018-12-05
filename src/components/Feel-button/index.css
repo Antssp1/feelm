@@ -21,7 +21,6 @@
     left: 39px;
     top: 50px;
     border-radius: 100px;
-    border: 1px solid transparent;
     background-color: rgba(0, 0, 0, 0.01);
     cursor: pointer;
 }
@@ -41,7 +40,6 @@
         left: 38px;
         top: 38px;
         border-radius: 100px;
-        border: 1px solid transparent;
         background-color: rgba(0, 0, 0, 0);
         transition: background-color 200ms ease-in-out;
         cursor: pointer;

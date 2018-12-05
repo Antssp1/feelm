@@ -18,7 +18,7 @@ class Actu extends Component{
     }
     render(){ 
     return (
-        <div className="container-actu" onScroll={(evt) => this.handleScroll(evt)}>
+        <div className="container-actu">
             <BoutonTri activate={(str) => this.changeOrder(str)}/>
             <Layout apiType={this.state.apiType}/>
             <ButtonScroll direction="up"/>

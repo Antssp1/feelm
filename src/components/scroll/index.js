@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.css";
 import Gif from "./giffy.gif";
-import ListFilm from "../List-film/index"
 import {withRouter} from "react-router"
 
 let count = 1;
