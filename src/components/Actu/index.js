@@ -3,6 +3,7 @@ import "./index.css"
 import BoutonTri from "../Bouton-tri/index";
 import Layout from "../scroll/index";
 import ButtonScroll from '../../Components/ButtonScroll/index'
+import BackButton from "../../components/Back-button/index"
 
 class Actu extends Component{
     constructor(props){
@@ -19,6 +20,7 @@ class Actu extends Component{
     render(){ 
     return (
         <div className="container-actu">
+            <BackButton />
             <BoutonTri activate={(str) => this.changeOrder(str)}/>
             <Layout apiType={this.state.apiType}/>
             <ButtonScroll direction="up"/>
