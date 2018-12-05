@@ -22,7 +22,7 @@ const feel = [
         genre:"18"
     },
     {
-        feeling:"En Colère",
+        feeling:"En Colere",
         image:EnColere,
         genre:"10752"
       }, 
