@@ -28,10 +28,11 @@ class ButtonsPlayClose extends Component {
             <div className="body">
                 <img onClick={() => this.handleClick()} src={ButtonPlay} className="button-play" alt="Button Play" />
                 {this.state.isVisible ? (
-                    <div className="video">
-                        <img onClick={() => this.handleClick()} src={ButtonClose} className="button-close" alt="Button Play" />
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.props.video}?controls=0`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                    <div className="video-bg">
+                        <div className="video-container">
+                            <img onClick={() => this.handleClick()} src={ButtonClose} className="button-close" alt="Button Close" />
+                            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.props.video}?controls=0&`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" ></iframe>
+                        </div>
                     </div>
                 ) : null}
             </div>
