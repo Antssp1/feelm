@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import DetailFilm from "../DetailsFilm/index";
- 
+import DetailFilm from "../DetailsFilm/index"; 
 
 const idMovie = 338952;
 
@@ -53,6 +52,7 @@ class Detail extends Component{
         return(
 
             <div>
+                
                 <DetailFilm 
                     affiche={this.state.movieData.backdrop_path}
                     video={this.state.video.key} 

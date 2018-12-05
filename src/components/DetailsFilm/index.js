@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./index.css";
-import ButtonsPlayClose from "../Button-play/index"
+import ButtonsPlayClose from "../Button-play/index";
+import BackButton from "../../Components/Back-button/index";
+
 
 
 class DetailsFilm extends Component {
@@ -29,13 +31,15 @@ class DetailsFilm extends Component {
         return (
 
             <React.Fragment>
-
+                
                 <ButtonsPlayClose displayNon={() => this.cacher()} />
 
                 <div className={description}>
+                
 
                     <div className="header-detail image-poster" style={{ backgroundImage: 'url(https://image.tmdb.org/t/p/w1400_and_h450_bestv2' + this.props.affiche + ')' }}>
                         <div className="titre">
+                        <BackButton className="backbutton" />
                             <h2 className="titre-film">{this.props.titre}</h2>
                         </div>
                        
