@@ -21,7 +21,9 @@ class Detail extends Component{
         .then(response => response.json())
         .then (data => {
             this.setState({
-                movieData : data 
+                movieData : data,
+                genre : data.genres[0],
+
             })
         })
 
@@ -30,29 +32,10 @@ class Detail extends Component{
         .then(response => response.json())
         .then (data => {
             this.setState({
-                cast : data.cast[0]
+                cast : data.cast[0],
+                director : data.crew[0],
             })
         })
-
-
-        fetch("https://api.themoviedb.org/3/movie/338952/credits?api_key=b53ba6ff46235039543d199b7fdebd90" )
-        .then(response => response.json())
-        .then (data => {
-            this.setState({
-                director : data.crew[0]
-            })
-        })
-
-
-        fetch("https://api.themoviedb.org/3/movie/338952?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US" )
-        .then(response => response.json())
-        .then (data => {
-            this.setState({
-                genre : data.genres[0]
-            })
-        })
-
-
         
 
         fetch("https://api.themoviedb.org/3/movie/338952/videos?api_key=b53ba6ff46235039543d199b7fdebd90&language=en-US" )

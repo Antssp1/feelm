@@ -8,14 +8,10 @@
     background-size: cover;
 }
 
-.image-poster img{
-   width: 100%; 
-   height: 50vh;
-   object-fit: cover;
-}
-
 .header-detail .titre{
     position: absolute;
+    height: 50vh;
+    background-color: #00000024;
 }
 
 .header-detail h2{
@@ -27,18 +23,11 @@
     text-shadow: 0px 0px 7px rgba(0,0,0,0.87);
 }
 
-hr{
-    width: 10vh;
-    margin-left: 2.1em;
-    height: 5px;
-    border: none;
-    background-color: #ff3c35;  
-}
-
-.button-play {
+.header-detail h2:after{
     position: absolute;
-    left: 73%;
-    margin-top: -44px;
+    border-bottom:3px solid #ff3c35;
+    width: 10vh;
+    height:5px;
 }
 
 .list-infos-film .info li{
@@ -58,6 +47,7 @@ hr{
 .list-infos-film ul{
     list-style: none;
 }
+
 .list-infos-film .info li:not(.no-bar){
     border-right: 2px solid #fe5e18;
     padding-right: 1em;
@@ -86,9 +76,13 @@ p.description-film {
     height: 5vh;
 } 
 
+.displayNon{
+    display: none;
+}
 
-
-
+.button-play {
+    left: 74%;
+}
 
 
 @media (min-width: 576px) { 
@@ -96,8 +90,11 @@ p.description-film {
         background: url("./bkg-pc-detail.jpg") no-repeat center ;
         background-position-y: 1em;
     }
-    .button-play {
-        left: 82%;
+    .header-detail .titre{
+        position: absolute;
+        width: 100vh;
+        height: 50vh;
+        background-color: #00000024;
     }
 }
 
