@@ -54,7 +54,7 @@ class DetailsFilm extends Component {
                                 <li className="no-bar">{this.props.duree} mins </li>
                             </ul>
                             <ul className="info2">
-                                <li className="right">Producer : {this.props.Producer} </li>
+                                <li className="right">Producer : {this.props.Producer ? this.props.Producer.name : ""} </li>
                                 <li className="no-bar">Principal actor : {this.props.acteur}  </li>
                             </ul>
                             <p className="description-film">{this.props.description}</p>

@@ -2,6 +2,8 @@ import React from "react";
 import "./index.css";
 import Gif from "./giffy.gif";
 import {withRouter} from "react-router"
+import {NavLink} from "react-router-dom"
+
 
 let count = 1;
 class Layout extends React.Component {
@@ -60,8 +62,9 @@ componentDidUpdate(prevProps, prevState){
 
   render() {
     const movieList = this.state.movieList.map((elem, index) => (
+      
 
-      <li key={index}><img src={`https://image.tmdb.org/t/p/w200_and_h300_bestv2${elem.poster_path}`} alt=""/></li>
+      <li key={index}><NavLink to={`/Detail/${elem.id}`}><img src={`https://image.tmdb.org/t/p/w200_and_h300_bestv2${elem.poster_path}`} alt=""/></NavLink></li>
 
     ))
     

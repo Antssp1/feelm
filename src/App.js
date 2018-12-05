@@ -13,7 +13,7 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Home} exact/>
             <Route path="/actu/:genre" component={Actu}/>
-            <Route path="/detail" component={Detail}/>
+            <Route path="/detail/:id" component={Detail}/>
           </Switch>
         </BrowserRouter>
       </div>
