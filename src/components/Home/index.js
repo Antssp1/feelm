@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Logo from './Logo.png';
 import "./index.css";
-import ListButton from "../../components/List-button/index"
+import ListButton from "../../Components/List-button/index"
 import ButtonScroll from "../../Components/ButtonScroll/index"
 
 class Home extends Component {

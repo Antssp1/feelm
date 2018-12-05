@@ -1,0 +1,106 @@
+
+
+.list-infos-film, .films-similaires{
+    padding:2em;
+}
+
+.image-poster{
+    background-color:black;
+    height:50vh;
+    background-size: cover;
+}
+
+.header-detail .titre{
+    height: 50vh;
+    background-color: #00000024;
+}
+
+.header-detail h2{
+    position: relative;
+    color:white;
+    padding: 4em 1.2em 0 1.2em;
+    margin-top: 0;
+    font-size: 1.7em;
+    text-shadow: 0px 0px 7px rgba(0,0,0,0.87);
+}
+
+.header-detail h2:after{
+    content:"";
+    position: absolute;
+    border-bottom:5px solid #ff3c35;
+    width: 10vh;
+    bottom:0;
+    left:0;
+    margin-left:1.2em;
+    margin-bottom:-0.6em;
+}
+
+.list-infos-film .info li, .info2 li{
+    font-size:15px;
+    font-weight:600;
+}
+.list-infos-film .info li{
+    display: inline;
+}
+
+.list-infos-film .info2{
+    padding-top: 0.5em;
+}
+
+.list-infos-film ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.list-infos-film .info li:not(:last-child){
+    border-right: 2px solid #fe5e18;
+    padding-right: 1em;
+    margin-right:1em;
+}
+
+p.description-film {
+    margin-top: 4em;
+}
+
+.container-detail .films-similaires{
+    margin: 0;
+    background: url("./bkg-mobile-detail.jpg") no-repeat center ;
+    background-position-y: 0;
+    text-align: center;
+    height: 5vh;
+} 
+
+.displayNon{
+    display: none;
+}
+
+.button-play {
+    left: 74%;
+}
+
+.titre .bouton-fleche {
+    top:0;
+    left:0;
+    position: absolute;
+}
+
+@media (min-width: 576px) { 
+    .container-detail .films-similaires {
+        background: url("./bkg-pc-detail.jpg") no-repeat center ;
+        background-position-y: 1em;
+    }
+   
+}
+
+@media (min-width:768px){
+    .liste-detail{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    .titre {
+        padding-left: 5.1em;
+    }
+
+}
