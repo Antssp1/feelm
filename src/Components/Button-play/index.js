@@ -16,7 +16,7 @@ class ButtonsPlayClose extends Component {
 
 
     handleClick() {
-        this.props.displayNon()
+        // this.props.displayNon()
         this.setState({
             isVisible: !this.state.isVisible
         })
@@ -42,5 +42,3 @@ class ButtonsPlayClose extends Component {
 }
 
 export default ButtonsPlayClose;
-
-//                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.props.video}?controls=0`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
