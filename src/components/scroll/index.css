@@ -6,6 +6,14 @@
 .scoll-list{
     padding: 0;
     margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.scoll-list li{
+    padding: 50px;
 }
 
 .scoll-list_item{

@@ -16,7 +16,7 @@ class Home extends Component {
         <div className="header-description">
           <div className="logo-description">
             <img src={Logo} alt="feel'm logo" />
-            <p>Make the choice that match with your feeling between <b>400 000 movies</b> !</p>
+            <p>Make the choice that match with your feeling among <b>400 000 movies</b> !</p>
           </div>
           <div className="div-question-gif">
             <p className="question">How do you feel today ?</p>
