@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./index.css";
 import ButtonsPlayClose from "../Button-play/index";
-import BackButton from "../../Components/Back-button/index";
+import BackButton from "../../components/Back-button/index";
 
 
 

@@ -2,8 +2,8 @@ import React, {Component} from "react"
 import "./index.css"
 import BoutonTri from "../Bouton-tri/index";
 import Layout from "../scroll/index";
-import ButtonScroll from '../../Components/ButtonScroll/index'
-import BackButton from "../../Components/Back-button/index"
+import ButtonScroll from '../../components/ButtonScroll/index'
+import BackButton from "../../components/Back-button/index"
 
 class Actu extends Component{
     constructor(props){
