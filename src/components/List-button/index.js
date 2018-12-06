@@ -12,38 +12,38 @@ import Anxieux from "./7.png"
 
 const feel = [
     {
-      feeling:"Joyeux",
+      feeling:"Happy",
       image:Joyeux,
       genre:"35"
     }, 
     {
-        feeling:"Triste",
+        feeling:"Sad",
         image:Triste,
         genre:"18"
     },
     {
-        feeling:"En Colere",
+        feeling:"Angry",
         image:EnColere,
         genre:"10752"
       }, 
       {
-        feeling:"Amoureux",
+        feeling:"In Love",
         image:Amoureux,
         genre:"10749"
       }, 
       {
-        feeling:"Sadique",
+        feeling:"Sadistic",
         image:Sadique,
         genre:"27"
       }, 
       {
-        feeling:"Confiant",
+        feeling:"Confident",
         image:Confiant,
         genre:"28",
         secondGenre:"878"
       },
       {
-        feeling:"Anxieux",
+        feeling:"Anxious",
         image:Anxieux,
         genre:"53"
       },

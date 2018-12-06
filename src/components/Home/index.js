@@ -16,10 +16,10 @@ class Home extends Component {
         <div className="header-description">
           <div className="logo-description">
             <img src={Logo} alt="feel'm logo" />
-            <p>Faites le choix qui convient le mieux à votre humeur parmi plus de <b>400 000 films</b> !</p>
+            <p>Make the choice that match with your feeling between <b>400 000 movies</b> !</p>
           </div>
           <div className="div-question-gif">
-            <p className="question">Comment vous sentez-vous ?</p>
+            <p className="question">How do you feel today ?</p>
            <ButtonScroll direction="down"/>
           </div>
         </div>

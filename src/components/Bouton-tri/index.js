@@ -18,8 +18,8 @@ class BoutonTri extends Component{
     render(){
         return (  
     <div className={"tri-bar " + (this.state.byPopular ? 'popular-container' : 'latest-container')}>
-        <button className='popular' onClick={() => this.changeButton('popularity')}>Populaire</button>
-        <button className='latest' onClick={() => this.changeButton('release_date')}>Récent</button>
+        <button className='popular' onClick={() => this.changeButton('popularity')}>Popularity</button>
+        <button className='latest' onClick={() => this.changeButton('release_date')}>Recent</button>
     </div>
         )}
 }
