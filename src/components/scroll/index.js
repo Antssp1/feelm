@@ -64,7 +64,7 @@ componentDidUpdate(prevProps, prevState){
     const movieList = this.state.movieList.map((elem, index) => (
       
 
-      <li className={this.props.classname} key={index}><NavLink to={`/Detail/${elem.id}`}><img src={`https://image.tmdb.org/t/p/w200_and_h300_bestv2${elem.poster_path}`} alt=""/></NavLink></li>
+      <li className={this.props.classname} key={index}><NavLink to={`/Detail/${elem.id}`}><img src={`https://image.tmdb.org/t/p/w200/${elem.poster_path}`} alt=""/></NavLink></li>
 
     ))
     
